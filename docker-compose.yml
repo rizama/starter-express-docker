@@ -3,9 +3,10 @@ version: "3"
 services:
     backend:
         image: node:14
-        working_dir: /app
+        working_dir: /usr/src/app
+        container_name: nodejs_app
         volumes:
-            - ./:/app
+            - ./:/usr/src/app
         ports:
             - 5000:5000
         environment:
